@@ -1,6 +1,17 @@
 # 16.10.2024
 # Ülesanded 4
 
+
+#Kingituste pakkimine
+try:
+    kast = 5
+    kingitusteArv = int(input("Lisa kingituste arv: "))
+    komplektid = kingitusteArv // kast #täisarvu saamine
+    yle = kingitusteArv % kast # jäägi jäämine
+    print(f"Saad teha {komplektid} täis kinkekasti, üle jääb {yle} kingitust.")
+except:
+    print("saLisasid koguse valesti")
+
 #Faili allalaadimine
 try:
 
