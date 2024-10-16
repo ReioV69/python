@@ -1,10 +1,20 @@
 # 16.10.2024
 # Ülesanded 4
 
+#Faili allalaadimine
+try:
+
+    failisuurus = int(input("Sisesta faili suurus: "))
+    downlkiirus = int(input("Sisesta allalaadimise kiirus: "))
+    aeg = failisuurus/downlkiirus
+    print(f"Allalaadimiseks kulub {aeg} sekundit")
+except:
+    print("Palun siseta täisarvu!")
+
 #Raamatute allahindulus
 ale = 0.3
 hind = 12.5
-kogus = int(input("Lisa raamatute kogus: ")) 
+kogus = int(input("Lisa raamatute kogus: "))
 summa = (hind-(hind*ale)) * kogus
 print(f"{kogus} raamatu hind soodustusega on {summa:0.2f}€.")
 
