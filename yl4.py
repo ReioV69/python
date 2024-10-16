@@ -1,7 +1,20 @@
+import turtle
+
 # 16.10.2024
 # Ülesanded 4
 
 
+#ringi pindala ja Turtle
+try:
+    r = int(input("Sisesta ringi raadius: ")) 
+    s = 3.14*r**2
+    p = 2*3.14*r
+    print(f"Ringi pindala on {s:.2f} ja ümbermõõt on {p:.2f}")
+    turtle.circle(r*10,360)
+    turtle.done()
+except:
+    print("Sisestus on vale")
+"""
 #Kingituste pakkimine
 try:
     kast = 5
@@ -34,3 +47,4 @@ a = int(input("Lisa 1 külg: "))
 b = int(input("Lisa 2 külg: "))
 p = 2*(a+b)
 print(f"Aia kogupikkus on {p} meetrit.")
+"""
