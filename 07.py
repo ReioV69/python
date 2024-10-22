@@ -29,6 +29,11 @@ print(f"Max temp: {max(ajutine)}")
 print(f"Min temp: {min(ajutine)}")
 print(f"Keskmine temp: {round(sum(ajutine)/len(ajutine),2)}")
 print(f"-20 esineb {ajutine.count(-20)} korda")
+ajutine.pop(5-1)
+#del ajutine[4]
+ajutine.insert(5-1,16)
+ajutine.sort()
+print(ajutine)
 
 
 
