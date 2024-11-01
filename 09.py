@@ -191,6 +191,8 @@ ev_data = [
 ['Mercedes-Benz EQS 450+', '350', '102310'],
 ['Hyundai Kona Electric', '258', '37400']
 ]
+keskmine_odo = 0
+keskmine_hind = 0
 
 for i in ev_data:
     for j in i:
