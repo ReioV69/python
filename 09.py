@@ -1,4 +1,6 @@
 import random
+import turtle
+import math
 # 24.10.2024
 # Ülesanded
 
@@ -178,24 +180,35 @@ for i in range(11):
 
 
 
-ev_data = [
-['vehicle', 'range', 'price'],
-['Tesla Model Y Long Range', '330', '58990'],
-['Volkswagen ID.4 Pro', '260', '39995'],
-['Ford Mustang Mach-E', '300', '42995'],
-['Audi e-tron GT', '238', '102700'],
-['Nissan Leaf', '149', '27400'],
-['BMW iX xDrive50', '324', '83995'],
-['Polestar 2', '265', '45500'],
-['Kia EV6 Long Range', '310', '47795'],
-['Mercedes-Benz EQS 450+', '350', '102310'],
-['Hyundai Kona Electric', '258', '37400']
-]
-keskmine_odo = 0
-keskmine_hind = 0
+# ev_data = [
+# ['vehicle', 'range', 'price'],
+# ['Tesla Model Y Long Range', '330', '58990'],
+# ['Volkswagen ID.4 Pro', '260', '39995'],
+# ['Ford Mustang Mach-E', '300', '42995'],
+# ['Audi e-tron GT', '238', '102700'],
+# ['Nissan Leaf', '149', '27400'],
+# ['BMW iX xDrive50', '324', '83995'],
+# ['Polestar 2', '265', '45500'],
+# ['Kia EV6 Long Range', '310', '47795'],
+# ['Mercedes-Benz EQS 450+', '350', '102310'],
+# ['Hyundai Kona Electric', '258', '37400']
+# ]
 
-for i in ev_data:
-    for j in i:
-        print(f"{j:>30}", end=" ")
-    print()
+# print(ev_data[1][0]+" "+ev_data[1][1])
+# keskmineOdo = []
+# keskmineHind = []
 
+# for i in ev_data:
+#     if i[0] !="vehicle":
+#         keskmineOdo.append(int(i[1]))
+#         keskmineHind.append(int(i[2]))
+#         #print(i[1])
+#     if i[0] != "vehicle" and int(i[1]) > 300:
+#             print(i[0])
+
+# print(sum(keskmineOdo)/len(keskmineOdo))
+# print(sum(keskmineHind)/len(keskmineHind))
+
+#Skanneriitud ja tsükklitega tehtud
+
+#18
