@@ -8,7 +8,7 @@ screen = turtle.Screen()
 t = turtle.Turtle()
  
 # Küsi kasutajalt numbrilist sisendit
-pikkus = screen.numinput("Vanuse sisestamine", "Joonlaua pikksu", default=20, minval=0, maxval=100)
+pikkus = screen.numinput("Vanuse sisestamine", "Joonlaua pikkus", default=20, minval=0, maxval=100)
 vanus = 8
 cm = 10
 mm = 3
