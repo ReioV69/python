@@ -1,7 +1,7 @@
 import random
 import turtle
 import math
-# 24.10.2024
+# 24.10.2024 Reio Viikmaa
 # Ülesanded
 
 # # Genereeri ja kuva arvud arvud 1-20
