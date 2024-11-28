@@ -1,6 +1,7 @@
+import os
+
 # Reio Viikmaa 28.11.24
 # Ülesanne 17
-
 
 # meeste keskmised töötunnid, töötasu ning palk
 # naiste keskmised töötunnid, töötasu ning palk
@@ -10,11 +11,13 @@ fail =  open("palgad.txt")
 read = fail.readlines()
 npalgad = []
 mpalgad = []
-
+os.mkdir("palgad")
 for i in read:
     r = i.split(",")
+    failinimi = r[0] + "_" + r[1] + ".txt"
+    file = open("palgad/" + failinimi, 'a')
     for j in range(1,7):
-        print(r[j])
+        file.write(r[j] + "\n")
     if r[3] == "Mees": 
         mpalgad.append(float(r[6]))
     else:
