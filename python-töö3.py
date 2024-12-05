@@ -9,7 +9,7 @@ print(vastuvõetud)
 fail.close()
 
 
-a = int(input("Palun sisestage, millise aasta andmeid vajate?"))
+a = int(input("Palun sisestage, millise aasta andmeid vajate? "))
 
 print(vastuvõetud[int(a[3])-1])
 
