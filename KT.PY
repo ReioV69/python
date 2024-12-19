@@ -70,7 +70,33 @@ mäng()
 
 
 #7
+# Eurokalkulaator
+# Tere tulemast eurokalkulaatorisse!
+print("Tere tulemast eurokalkulaatorisse!")
 
+# Küsib kasutajalt, millises suunas ta soovib valuutat konverteerida
+valik = input("Valige konverteerimise suund (EUR->EEK või EEK->EUR): ").strip().upper()
+
+# Kontrollib, kas kasutaja valik on korrektne
+if valik not in ["EUR->EEK", "EEK->EUR"]:
+    # Kui valik on vale, kuvab veateate
+    print("Vale valik! Palun valige kas 'EUR->EEK' või 'EEK->EUR'.")
+else:
+    # Kui valik on õige, küsib valuuta kogust
+    kogus = float(input("Sisestage valuuta kogus: "))
+
+    # Kontrollib, kas valik on EUR->EEK
+    if valik == "EUR->EEK":
+        # Arvutab EUR->EEK konverteerimise
+        tulemus = kogus * 15.6466
+        # Kuvab tulemuse
+        print(f"{kogus} EUR on {tulemus:.2f} EEK.")
+    # Kontrollib, kas valik on EEK->EUR
+    elif valik == "EEK->EUR":
+        # Arvutab EEK->EUR konverteerimise
+        tulemus = kogus / 15.6466
+        # Kuvab tulemuse
+        print(f"{kogus} EEK on {tulemus:.2f} EUR.")
 #10
 """Kaugushüpe
 	kasutaja sisestab 3 kaugushüppe tulemust - 1p
@@ -80,7 +106,7 @@ mäng()
 #küsib 3 kaugushüppe tulemust
 hypped = []
 for i in range(3):
-    tulemus = float(input(f"Sisesta {i+1}. kaugushüppe tulemus: "))
+    tulemus = float(input(f"Sisesta {i+1}. kaugushüppe tulemus: ")) # i+1 et alustaks 1-st mitte 0-st
     hypped.append(tulemus)
 
 #leiab parima ja keskmise tulemuse
