@@ -31,28 +31,28 @@ for index, item in enumerate(poe_list, start=1):
 	kood kommenteeritud - 1p
 """
 import random
-
+#funktisoon täringu keerutamiseks, see annab 2 juhuslikku arvu 1-6
 def keeruta_taringut():
     return random.randint(1, 6), random.randint(1, 6)
-
+#mängu põhifunktsioon
 def mäng():
     print("Tere tulemast täringumängu!")
-    raha = 100
+    raha = 100 #mängija raha alguses
     while raha > 0:
         panus = int(input(f"Teil on {raha} eurot. Kui palju soovite panustada? "))
         if panus > raha:
             print("Teil pole nii palju raha!")
-            continue    
-    
+            continue 
+    #veeretab täringud kasutaja ja arvuti jaoks
         kasutaja_täringud = keeruta_taringut()
         arvuti_täringud = keeruta_taringut()
-
+    #arvutab täringute summa
         kasutaja_summa = sum(kasutaja_täringud)
         arvuti_summa = sum(arvuti_täringud)
-
+    #prindib täringud ja summa
         print(f"Teie täringud: {kasutaja_täringud} (summa: {kasutaja_summa})")
         print(f"Arvuti täringud: {arvuti_täringud} (summa: {arvuti_summa})")
-
+    #kontrollib kes võitis ja uuendab raha summat
         if kasutaja_summa > arvuti_summa:
             raha += panus
             print(f"Te võitsite {panus} eurot!")
@@ -61,17 +61,33 @@ def mäng():
             print(f"Te kaotasite {panus} eurot!")
         else:
             print("Viik! Raha jääb samaks.")
-
+#kontrollib kas raha on otsas
         if raha == 0:
             print("Teil on raha otsas. Mäng läbi!")    
-   
-if __name__ == "__main__":
-    mäng()
+#käivitab mängu kui skript käivitatakse
+mäng()
 
 
 
 #7
 
 #10
+"""Kaugushüpe
+	kasutaja sisestab 3 kaugushüppe tulemust - 1p
+	sinu programm leiab ning väljastab parima ja keskmise tulemuse - 2p
+	programmi dialoog kasutajaga on arusaadav ja üheselt mõistetav - 1p
+	kood kommenteeritud - 1p"""
+#küsib 3 kaugushüppe tulemust
+hypped = []
+for i in range(3):
+    tulemus = float(input(f"Sisesta {i+1}. kaugushüppe tulemus: "))
+    hypped.append(tulemus)
 
+#leiab parima ja keskmise tulemuse
+parim_tulemus = max(hypped)
+keskmine_tulemus = sum(hypped) / len(hypped)
+
+#prindib tulemused
+print(f"Parim tulemus: {parim_tulemus} meetrit")
+print(f"Keskmine tulemus: {keskmine_tulemus} meetrit")
 #16
