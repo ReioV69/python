@@ -5,8 +5,8 @@
 #Restoranis on tavaks jätta teenindajale jootraha, mis moodustab tavaliselt vähemalt 15% arve summast.
 #Programm küsib kasutajalt summa sõnena formaadis ##.##€ (kus iga # tähistab numbrit), eemaldab euro märgi (€) ja teisendab summa ujukomaarvuks (float). Näiteks, kui kasutaja sisestab 50.00€, tagastab programm 50.0.
 #Eeldatakse, et kasutaja sisestab väärtused alati nõutud formaadis.
-Jootraha_summa = input("Sisesta summa sõnena formaadis ##.##€: ")
-summ = float(Jootraha_summa.replace("€", ""))
+jootraha_summa = input("Sisesta summa sõnena formaadis ##.##€: ")
+summ = float(jootraha_summa.replace("€", ""))
 jootraha = summ * 0.15
 print(f"Jootraha 15% on {jootraha}€")
 
@@ -51,7 +51,7 @@ application/octet-stream
 
 Eeldatakse, et kasutaja sisestab failinime õigesti vormindatuna.
 """
-Laiendid = {
+laiendid = {
     ".gif": "image/gif",
     ".jpg": "image/jpeg",
     ".jpeg": "image/jpeg",
@@ -62,7 +62,7 @@ Laiendid = {
 }
 failinimi = input("Sisesta failinimi: ")
 faililaiend =  "." + failinimi.split(".")[-1]
-if faililaiend in Laiendid:
-    print(Laiendid[faililaiend])
+if faililaiend in laiendid:
+    print(laiendid[faililaiend])
 else:
     print("application/octet-stream")
